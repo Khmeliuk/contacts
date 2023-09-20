@@ -1,14 +1,12 @@
 import { Box } from "../../App/Box";
 import { AiFillDelete } from "react-icons/ai";
 import { ContactsListStyled } from "./ContactsListStyled";
-import { Link, useHref, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useDeleteContactMutation } from "../../redux/rtkQuery";
 export function ContactsList({ renderData, title, isLoadingProps }) {
   const [deleteContact, { isLoading }] = useDeleteContactMutation();
-  const Href = useHref();
+
   const location = useLocation();
-  console.log(Href, "asdasdasdasda");
-  console.log(location, "location");
 
   return (
     <Box

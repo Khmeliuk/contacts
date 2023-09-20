@@ -1,5 +1,6 @@
 import normalize from "styled-normalize";
 import { createGlobalStyle } from "styled-components";
+import bgimg from "./img/bg.jpg";
 
 export const GlobalStyle = createGlobalStyle`
   ${normalize}
@@ -20,8 +21,7 @@ export const GlobalStyle = createGlobalStyle`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
-   background-image: url('https://static.vecteezy.com/system/resources/previews/010/008/086/original/background-dimension-3d-graphic-message-board-for-text-and-message-design-line-shadow-for-modern-web-design-free-vector.jpg');
+  background-image:url(${bgimg})
   }
   list-style:none;
   color:red;

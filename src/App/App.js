@@ -1,7 +1,7 @@
 import { Box } from "./Box.js";
 import { ThemeUIProvider } from "theme-ui";
 import { theme } from "./theme.js";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { refreshTokenAsyncThunk } from "../redux/auth/authOperation.js";
 import { BrowserRouter, Route } from "react-router-dom";
@@ -45,7 +45,7 @@ function App() {
         as="main"
         height="400px"
       >
-        <BrowserRouter>
+        <BrowserRouter basename="/contacts">
           <RoutesStyled>
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
